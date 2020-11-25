@@ -1,0 +1,393 @@
+{
+	"info": {
+		"_postman_id": "fc4f7988-ee30-41be-8fc9-34e87dd8f533",
+		"name": "M14Daus_Fase3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "crea usuario con body {} vacío",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/players",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"players"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "put user 1",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"nomUsuari\": \"Alberto Garcia\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/players/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"players",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "crea usuario ",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"nomUsuari\":\"Alberto\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/players",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"players"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "crea usuario ",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"nomUsuari\":\"Sara\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/players",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"players"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get loser",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/players/ranking/loser",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"players",
+						"ranking",
+						"loser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "winner",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/players/ranking/winner",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"players",
+						"ranking",
+						"winner"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "play 1 lanza dados",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/players/1/games",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"players",
+						"1",
+						"games"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "play 2 lanza dados",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/players/1/games",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"players",
+						"1",
+						"games"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get lista tiradas user 1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/players/1/games",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"players",
+						"1",
+						"games"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete tiradas user 1",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/players/1/games",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"players",
+						"1",
+						"games"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login admin",
+			"request": {
+				"auth": {
+					"type": "bearer"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userName\" : \"admin\",\n    \"password\" : \"micontrasenya\"\n}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login user (no admin)",
+			"request": {
+				"auth": {
+					"type": "bearer"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userName\" : \"admin\",\n    \"password\" : \"micontrasenya\"\n}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get lista tiradas user 2 con token ADMIN",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{key-admin}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/players/2/games",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"players",
+						"2",
+						"games"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get lista tiradas user 2 con token USER",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{key-user-noadmin}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/players/2/games",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"players",
+						"2",
+						"games"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "d00de116-0c5c-41ed-9eee-295ec100c395",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "b876e4c6-2958-4f3f-bcf8-631ebed6456b",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "89b792c9-21f8-4895-92a8-a75e1d76e90d",
+			"key": "key-user-noadmin",
+			"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE2MDYzMzAwMTIsInN1YiI6InVzZXIiLCJyb2wiOlsiVVNFUiJdfQ.t1st6qqoqyEC9UdkPXe1P8crw88rfNySVgPRTWzRX6I0Mh0LsyiMKvTfMVXe20A4-HQAWH5k93cPg6f0GvO0NA"
+		},
+		{
+			"id": "de505773-1586-40df-ae03-2fc46171dd33",
+			"key": "key-admin",
+			"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE2MDcxODM1NDMsInN1YiI6ImFkbWluIiwicm9sIjpbIlJPTEVfQURNSU4iXX0.wiJ-L_9jJXOfKHXzO9pSmlEftsA9FKAnTXRlzkEgAj31YGgnVOfXUptIOdgdZt_hMDL3pIP5ajTTilnajMUspQ"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
